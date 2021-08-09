@@ -25,6 +25,15 @@ public class Medidas {
                 case 1:
                     area = calcularAreaDoQuadrado();
                     break;
+                case 2:
+                    area = calcularAreaDoRetangulo();
+                    break;
+                case 3:
+                    area = calcularAreaDoTriangulo();
+                    break;
+                case 4:
+                    area = calcularAreaDoCirculo();
+                    break;
                 case 5:
                     tabuada();
                     break;
@@ -57,6 +66,34 @@ public class Medidas {
             System.out.println("");
         }
         return Math.pow(lado, 2);
+    }
+
+    public static double calcularAreaDoRetangulo(){
+        double comprimento, largura;
+
+        System.out.print("Digite o tamanho da largura: ");
+        largura = entrada.nextDouble();
+        System.out.print("Digite o tamanho do comprimento: ");
+        comprimento = entrada.nextDouble();
+        return comprimento * largura;
+    }
+
+    public static double calcularAreaDoTriangulo(){
+        double altura, base;
+
+        System.out.print("Digite a altura do triangulo: ");
+        altura = entrada.nextDouble();
+        System.out.print("Digite a base do triangulo: ");
+        base = entrada.nextDouble();
+        return (base * altura) / 2;
+    }
+
+    public static double calcularAreaDoCirculo(){
+        double raio, pi;
+
+        System.out.print("Digite o tamanho do raio do circulo: ");
+        raio = entrada.nextDouble();
+        return Math.PI * (Math.pow(raio,2));
     }
 
     public static void tabuada(){
