@@ -10,6 +10,6 @@ repositories {
 }
 
 dependencies {
-
+    implementation group: 'com.opencsv', name: 'opencsv', version: '4.2'
 }
 
